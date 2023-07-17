@@ -1,10 +1,10 @@
 import './App.css';
-import Info from './Info';
+import AverageAssginment from './AverageAssginment';
 
 function App() {
   return (
     <div className="App">
-      <Info></Info>
+      <AverageAssginment></AverageAssginment>
     </div>
   );
 }
