@@ -5,7 +5,7 @@ import AverageNumberList from './AverageNumberList';
 import useAverageModel from './useAverageModel';
 
 const initData = {
-  list: [10, 50, 30, 70, 100],
+  list: [10, 20, 30, 40, 50],
   number: '',
 };
 
@@ -15,7 +15,11 @@ const AverageAssginment = () => {
   console.log('화면 재 구성함');
   return (
     <div>
-      <AverageInputBox state={state} onChange={onChange} onClick={onClick} />
+      <AverageInputBox
+        number={state.number}
+        onChange={onChange}
+        onClick={onClick}
+      />
       <AverageNumberList list={state.list} />
       <AverageDisplay list={state.list} />
     </div>
