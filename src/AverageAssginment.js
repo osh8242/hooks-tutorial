@@ -1,8 +1,8 @@
 import React from 'react';
-import useAverageModel from './useAverageModel';
-import AverageNumberList from './AverageNumberList';
 import AverageDisplay from './AverageDisplay';
 import AverageInputBox from './AverageInputBox';
+import AverageNumberList from './AverageNumberList';
+import useAverageModel from './useAverageModel';
 
 const initData = {
   list: [10, 50, 30, 70, 100],

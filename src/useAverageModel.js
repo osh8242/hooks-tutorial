@@ -5,13 +5,9 @@ const reducer = (state, action) => {
     case 'change':
       return { ...state, number: action.value };
     case 'click':
-      if (isNaN(state.number) || state.number === '') {
-        alert('숫자를 입력하세요');
-        return { ...state, number: '' };
-      } else {
-        const newList = state.list.concat(parseInt(state.number));
-        return { list: newList, number: '' };
-      }
+      const newList = state.list.concat(parseInt(state.number));
+      return { list: newList, number: '' };
+
     default:
       return state;
   }
@@ -24,6 +20,10 @@ const useAverageModel = (initData) => {
     dispatch({ type: 'change', value: e.target.value });
   };
   const onClick = (e) => {
+    if (isNaN(state.number) || state.number === '') {
+      alert('숫자를 입력하세요');
+      return;
+    }
     dispatch({ type: 'click' });
   };
 
